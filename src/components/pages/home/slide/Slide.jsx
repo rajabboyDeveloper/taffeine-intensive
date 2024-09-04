@@ -14,7 +14,14 @@ function Slide() {
   return (
     <div className={style.Slide}>
       <div className="b">
-        <OwlCarousel className="owl-theme" items={1} loop nav dots={false}>
+        <OwlCarousel
+          key={`carousel_${val.length ? val.length : 0}`}
+          className="owl-theme"
+          items={1}
+          loop
+          nav
+          dots={false}
+        >
           {val.map((item, index) => {
             return (
               <div

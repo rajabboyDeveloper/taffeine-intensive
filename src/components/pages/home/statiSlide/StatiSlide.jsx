@@ -16,7 +16,14 @@ function StatiSlide() {
     <div className="slide">
       <div className="container">
         <h1 className={style.title}>Cтатьи</h1>
-        <OwlCarousel className="owl-theme" items={3} loop margin={10} nav>
+        <OwlCarousel
+          key={`carousel_${val.length ? val.length : 0}`}
+          className="owl-theme"
+          items={3}
+          loop
+          margin={10}
+          nav
+        >
           {val.map((item, index) => {
             return (
               <Scard
